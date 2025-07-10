@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tinkle - Feed</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-flex">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Tinkle Logo" height="40">
+                <span class="logo-text">Tinkle</span>
+            </a>
+            <nav class="main-nav">
+                <a href="index.html" class="active">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="settings.html">Settings</a>
+            </nav>
+        </div>
+    </header>
+    <main class="container feed-main">
+        <aside class="sidebar">
+            <div id="current-user-profile" class="profile-card"></div>
+        </aside>
+        <section class="feed-section">
+            <h2 class="section-title">Feed</h2>
+            <div id="feed-posts"></div>
+        </section>
+    </main>
+    <footer class="main-footer">
+        <div class="container">
+            <span>&copy; 2024 Tinkle. All rights reserved.</span>
+        </div>
+    </footer>
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tinkle - Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-flex">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Tinkle Logo" height="40">
+                <span class="logo-text">Tinkle</span>
+            </a>
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="settings.html">Settings</a>
+            </nav>
+        </div>
+    </header>
+    <main class="container profile-main">
+        <section id="profile-details"></section>
+        <section>
+            <h2 class="section-title">Posts</h2>
+            <div id="profile-posts"></div>
+        </section>
+    </main>
+    <footer class="main-footer">
+        <div class="container">
+            <span>&copy; 2024 Tinkle. All rights reserved.</span>
+        </div>
+    </footer>
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        // Get user id from query param
+        const params = new URLSearchParams(window.location.search);
+        const userId = params.get('id') || window.localStorage.getItem('profileUserId') || '1';
+        window.localStorage.setItem('profileUserId', userId);
+        renderProfilePage(userId);
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tinkle - Settings</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-flex">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Tinkle Logo" height="40">
+                <span class="logo-text">Tinkle</span>
+            </a>
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="settings.html" class="active">Settings</a>
+            </nav>
+        </div>
+    </header>
+    <main class="container settings-main">
+        <section class="settings-section">
+            <h1>Settings</h1>
+            <form class="settings-form" onsubmit="event.preventDefault();alert('Settings saved (demo only)!');">
+                <label>
+                    Username:
+                    <input type="text" name="username" value="demo_user" disabled>
+                </label>
+                <label>
+                    Email:
+                    <input type="email" name="email" value="demo@tinkle.com" disabled>
+                </label>
+                <label>
+                    Theme:
+                    <select name="theme" id="theme-select">
+                        <option value="light">Light</option>
+                        <option value="dark">Dark</option>
+                    </select>
+                </label>
+                <button type="submit" class="btn primary">Save Settings</button>
+            </form>
+        </section>
+    </main>
+    <footer class="main-footer">
+        <div class="container">
+            <span>&copy; 2024 Tinkle. All rights reserved.</span>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <script>
+        // Demo theme toggle
+        document.getElementById('theme-select').addEventListener('change', function() {
+            document.body.classList.toggle('dark-theme', this.value === 'dark');
+        });
+    </script>
+</body>
+</html>

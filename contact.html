@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tinkle - Contact</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-flex">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Tinkle Logo" height="40">
+                <span class="logo-text">Tinkle</span>
+            </a>
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html" class="active">Contact</a>
+                <a href="settings.html">Settings</a>
+            </nav>
+        </div>
+    </header>
+    <main class="container contact-main">
+        <section class="contact-section">
+            <h1>Contact Us</h1>
+            <p>
+                Have feedback or questions? Reach out to the Tinkle team!
+            </p>
+            <form class="contact-form" onsubmit="event.preventDefault();alert('Thank you for contacting us!');this.reset();">
+                <label>
+                    Name:
+                    <input type="text" name="name" required>
+                </label>
+                <label>
+                    Email:
+                    <input type="email" name="email" required>
+                </label>
+                <label>
+                    Message:
+                    <textarea name="message" rows="4" required></textarea>
+                </label>
+                <button type="submit" class="btn primary">Send</button>
+            </form>
+        </section>
+    </main>
+    <footer class="main-footer">
+        <div class="container">
+            <span>&copy; 2024 Tinkle. All rights reserved.</span>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
